@@ -1515,6 +1515,7 @@ static struct msm_gpiomux_config apq8064_bcm2079x_nfc_configs[] __initdata = {
 	},
 };
 
+#if 0
 static struct gpiomux_setting sp_clk_config = {
 	.func = GPIOMUX_FUNC_2,
 	.drv  = GPIOMUX_DRV_2MA,
@@ -1560,6 +1561,7 @@ static struct msm_gpiomux_config msm8064_sp_gpio_config[] __initdata = {
 		}
 	},
 };
+#endif
 
 static struct gpiomux_setting gsbi4_suspended = {
     .func = GPIOMUX_FUNC_GPIO,

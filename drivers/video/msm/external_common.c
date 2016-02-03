@@ -1458,6 +1458,7 @@ static void hdmi_edid_detail_desc(const uint8 *data_buf, uint32 *disp_mode)
 
 static void limit_supported_video_format(uint32 *video_format)
 {
+#if 0
 	switch(slimport_get_link_bw()){
 	case 0x0a:
 		if((*video_format == HDMI_VFRMT_1920x1080p60_16_9) ||
@@ -1486,6 +1487,9 @@ static void limit_supported_video_format(uint32 *video_format)
 	default:
 		break;
 	}
+#else
+    *video_format = 0;
+#endif
 }
 
 static void add_supported_video_format(
